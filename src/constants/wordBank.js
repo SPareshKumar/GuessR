@@ -1,48 +1,82 @@
 export const WORD_BANK = [
-  // NATURE & GEOGRAPHY
-  "mountain", "forest", "ocean", "volcano", "desert", "island", "river", "valley", "glacier", "canyon",
-  "waterfall", "jungle", "meadow", "prairie", "asteroid", "galaxy", "planet", "comet", "horizon", "thunder",
-  "lightning", "rainbow", "tornado", "hurricane", "blizzard", "starlight", "sunlight", "moonlight", "eclipse", "aurora",
-  
-  // ANIMALS & CREATURES
-  "elephant", "giraffe", "dolphin", "penguin", "kangaroo", "leopard", "octopus", "squirrel", "hamster", "butterfly",
-  "scorpion", "ostrich", "peacock", "flamingo", "panther", "buffalo", "cheetah", "gorilla", "platypus", "reindeer",
-  "seahorse", "starfish", "tortoise", "vulture", "walrus", "badger", "falcon", "lizard", "spider", "beetle",
-  
-  // FOOD & DRINK
-  "chocolate", "spaghetti", "sandwich", "pineapple", "mushroom", "broccoli", "pancake", "hamburger", "burrito", "croissant",
-  "espresso", "smoothie", "lemonade", "cupcake", "avocado", "pumpkin", "cinnamon", "honeycomb", "popcorn", "pretzel",
-  "walnut", "coconut", "vanilla", "apricot", "lobster", "shrimp", "omelet", "pudding", "biscuit", "cheese",
-  
-  // HOUSEHOLD & OBJECTS
-  "keyboard", "monitor", "umbrella", "backpack", "telescope", "microscope", "flashlight", "refrigerator", "microwave", "toaster",
-  "blanket", "pillow", "curtain", "armchair", "bookshelf", "suitcase", "calculator", "calendar", "thimble", "compass",
-  "hammer", "wrench", "screwdriver", "lantern", "candle", "mirror", "ladder", "basket", "bucket", "camera",
-  
-  // CLOTHING & FASHION
-  "sneakers", "tuxedo", "raincoat", "sweater", "necklace", "bracelet", "earring", "handbag", "sandal", "pajamas",
-  "scarf", "mittens", "helmet", "uniform", "costume", "waistcoat", "cardigan", "slippers", "bowtie", "jewelry",
-  
-  // TRANSPORTATION
-  "airplane", "bicycle", "helicopter", "submarine", "sailboat", "spaceship", "scooter", "tractor", "ambulance", "carriage",
-  "ferry", "glider", "tramway", "unicycle", "motorcycle", "hotairballoon", "rocket", "train", "truck", "kayak",
-  
-  // BUILDINGS & PLACES
-  "castle", "library", "museum", "hospital", "stadium", "lighthouse", "skyscraper", "cottage", "factory", "aquarium",
-  "cathedral", "theatre", "observatory", "temple", "pyramid", "windmill", "greenhouse", "airport", "bakery", "pharmacy",
-  
-  // TOOLS & TECHNOLOGY
-  "computer", "battery", "satellite", "engine", "antenna", "speaker", "joystick", "headphone", "projector", "printer",
-  "robotic", "compass", "magnet", "magnifyingglass", "microchip", "circuit", "thermometer", "pendulum", "dynamo", "laser",
-  
-  // HOBBIES & SPORTS
-  "guitar", "trumpet", "saxophone", "violin", "basketball", "football", "baseball", "snowboard", "skateboard", "surfboard",
-  "shuttlecock", "racket", "dumbbell", "trophy", "canvas", "easel", "paintbrush", "harmonica", "tambourine", "clarinets",
-  
-  // MISC NOUNS
-  "diamond", "feather", "fountain", "statue", "anchor", "balloon", "bubble", "button", "crystal", "fossil",
-  "garden", "hammer", "jigsaw", "kettle", "marble", "needle", "needle", "parcel", "puzzle", "quilt",
-  "ribbon", "riddle", "shadow", "shell", "shield", "sledge", "stamp", "ticket", "trophy", "whistle"
+  // NATURE
+  "mountain","forest","ocean","desert","island","river","valley","canyon",
+  "waterfall","jungle","meadow","rainbow","thunder","lightning","storm",
+  "sun","moon","star","sky","cloud","rain","snow","beach","wave",
+  "lake","hill","tree","flower","grass","leaf","stone","sand","wind",
+
+  // ANIMALS
+  "dog","cat","lion","tiger","elephant","horse","monkey","bear",
+  "zebra","giraffe","dolphin","shark","whale","fish","bird",
+  "snake","frog","rabbit","deer","fox","wolf","panda",
+  "butterfly","spider","turtle","goat","cow","sheep","pig","hen",
+
+  // FOOD
+  "pizza","burger","sandwich","pasta","noodles","rice","bread",
+  "cake","cookie","chocolate","icecream","milk","coffee","tea",
+  "juice","apple","banana","mango","grapes","orange",
+  "cheese","egg","fries","popcorn","soup","salad","butter",
+  "jam","honey","chips","biscuit","paneer","corn","carrot",
+
+  // OBJECTS
+  "table","chair","bed","sofa","door","window","mirror",
+  "lamp","fan","clock","phone","laptop","keyboard","mouse",
+  "television","camera","bag","bottle","glass","plate",
+  "spoon","fork","knife","bucket","box","pen","pencil",
+  "eraser","notebook","book","brush","comb","rope",
+
+  // CLOTHING
+  "shirt","tshirt","jeans","pants","shorts","jacket",
+  "coat","dress","skirt","shoes","socks","cap",
+  "hat","scarf","gloves","belt","tie","uniform",
+
+  // TRANSPORT
+  "car","bus","train","bicycle","bike","truck",
+  "airplane","boat","ship","helicopter","metro",
+  "taxi","scooter","van","auto","rickshaw",
+
+  // PLACES
+  "school","college","hospital","market","mall",
+  "park","zoo","restaurant","hotel","airport",
+  "station","temple","office","bank","library",
+  "cinema","gym","stadium","playground",
+
+  // TECHNOLOGY
+  "computer","mobile","internet","wifi","app",
+  "game","screen","battery","charger",
+  "robot","drone","speaker","headphone",
+  "remote","printer","tablet","watch",
+
+  // SPORTS & HOBBIES
+  "cricket","football","basketball","tennis",
+  "badminton","hockey","golf","chess",
+  "guitar","piano","drum","dance","singing",
+  "drawing","painting","skating","swimming",
+  "running","cycling","yoga",
+
+  // ABSTRACT
+  "love","friend","family","music","movie",
+  "story","dream","idea","plan","goal",
+  "job","money","time","day","night",
+  "morning","evening","weekend","holiday",
+  "luck","power","energy","focus","hope",
+
+  // FUN / GAME WORDS
+  "ghost","pirate","ninja","wizard","alien",
+  "monster","superhero","king","queen",
+  "soldier","detective","thief","police",
+  "dragon","robot","fairy","giant",
+  "zombie","vampire","knight","clown",
+
+  // EXTRA COMMON WORDS (to reach ~300)
+  "key","lock","chain","ring","coin","wallet",
+  "card","ticket","map","flag","signal",
+  "bridge","road","path","circle","square",
+  "line","corner","edge","shadow","light",
+  "fire","smoke","dust","noise","sound",
+  "voice","picture","photo","image","video",
+  "color","shape","design","pattern",
+  "speed","force","weight","height","width"
 ];
 
 export const getRandomWord = () => {

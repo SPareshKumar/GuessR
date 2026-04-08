@@ -15,9 +15,10 @@ export const useGame = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
   
-  // New States for Hints
+  // Hint & Give up States
   const [hintsRevealed, setHintsRevealed] = useState({ one: false, two: false });
   const [isHintPanelOpen, setIsHintPanelOpen] = useState(false);
+  const [hasGivenUp, setHasGivenUp] = useState(false); // NEW STATE
 
   useEffect(() => {
     startNewGame();
@@ -30,9 +31,9 @@ export const useGame = () => {
     setIsWon(false);
     setGuess('');
     setError('');
-    // Reset hints
     setHintsRevealed({ one: false, two: false });
     setIsHintPanelOpen(false);
+    setHasGivenUp(false); // Reset give up state
   };
 
   const revealHint = (hintNumber) => {
@@ -40,6 +41,11 @@ export const useGame = () => {
       ...prev,
       [hintNumber]: true
     }));
+  };
+
+  const handleGiveUp = () => { // NEW FUNCTION
+    setHasGivenUp(true);
+    setIsHintPanelOpen(false); // Close panel when giving up
   };
 
   const handleSubmit = async () => {
@@ -89,6 +95,8 @@ export const useGame = () => {
     hintsRevealed,
     revealHint,
     isHintPanelOpen,
-    setIsHintPanelOpen
+    setIsHintPanelOpen,
+    hasGivenUp, // Exported state
+    handleGiveUp // Exported function
   };
 };

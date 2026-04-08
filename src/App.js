@@ -22,7 +22,9 @@ function App() {
     hintsRevealed,
     revealHint,
     isHintPanelOpen,
-    setIsHintPanelOpen
+    setIsHintPanelOpen,
+    hasGivenUp,
+    handleGiveUp
   } = useGame();
 
   if (isWon) {
@@ -32,6 +34,27 @@ function App() {
         guessCount={guesses.length}
         onPlayAgain={startNewGame}
       />
+    );
+  }
+
+  // New Game Over / Give Up Screen
+  if (hasGivenUp) {
+    return (
+      <div className="min-h-screen bg-blue-50 flex items-center justify-center p-4">
+        <div className="bg-white rounded-2xl shadow-xl border border-blue-100 p-6 max-w-sm w-full text-center animate-slide-in">
+          <h1 className="text-2xl font-bold text-gray-800 mb-2">Game Over!</h1>
+          <p className="text-sm text-gray-600 mb-1">The secret word was:</p>
+          <p className="text-3xl font-black bg-gradient-to-r from-red-500 to-pink-500 bg-clip-text text-transparent mb-6">
+            {targetWord.toUpperCase()}
+          </p>
+          <button
+            onClick={startNewGame}
+            className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-indigo-700 transition-all shadow-md active:scale-95"
+          >
+            Play Again
+          </button>
+        </div>
+      </div>
     );
   }
 
@@ -53,6 +76,7 @@ function App() {
         hintsRevealed={hintsRevealed}
         onReveal={revealHint}
         targetWord={targetWord}
+        onGiveUp={handleGiveUp} // Pass the new prop here
       />
 
       <div className="max-w-3xl mx-auto py-8">
